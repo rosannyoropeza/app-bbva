@@ -1,10 +1,21 @@
-// const API_URL = 'http://localhost:3000';
+//VARIABLES 
+const API_URL = 'http://localhost:3000';
 
-// const HTMLResponse = document.querySelector("#root");
 
-// fetch(`${API_URL}/users`)
-//   .then(response => response.json())
-//   .then(users => {
-//       const templete = users.map((user) => `<li>${user.phone} ${user.name} ${user.password} </li>`);
-//       HTMLResponse.innerHTML = `<ul>${templete} </ul>`
-//   });
+export default function login (phone,password){
+    const data = {'phone': phone, 'password': password};
+    console.log(data,'data')
+    const objMethod = {
+        method: 'POST', 
+        body: JSON.stringify(data), 
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    }
+    console.log('metod',objMethod)
+
+    //HACIENDO LA PETICION A LA BASE DE DATOS
+    return fetch(`${API_URL}/auth`, objMethod)
+      .then(res => res.json())
+};
+

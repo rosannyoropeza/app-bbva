@@ -1,4 +1,4 @@
-import { inicio } from '../componentes/login.js';
+import { loginTemplate,logIn } from '../componentes/login.js';
 
 
 const content = document.getElementById('root');
@@ -18,8 +18,8 @@ export const router = (route) => {
     //   newCollectionPopersonajes
     //   break;
     default:
-      content.appendChild(inicio());
-      // logIn();
+      content.appendChild(loginTemplate());
+      logIn();
       // signUpGoogle();
       break;
   }
