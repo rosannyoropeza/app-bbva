@@ -31,11 +31,25 @@ export function loginTemplate() {
   }
   
   #voz{
-      z-index: 2;
-      height: 5vh;
-      position: absolute;
-      margin: 8vh 0 0 4vw;
+    z-index: 2;
+    height: 3em;
+    position: absolute;
+    margin: 5vh 0 0 1vw;
+    width: 3em;
+    border-radius: 100%;
+    background: none;
+    border: white solid;
+    cursor:pointer;
   }
+
+  #voz i {
+    color: white;
+    font-size: 2em;
+  }
+
+  #voz:hover{
+    background: #c997c0;
+}
   
   .containerLogIn{
       display: flex;
@@ -108,11 +122,16 @@ export function loginTemplate() {
       text-decoration: none;
       color:white;
     }
+
+    .containerCreateAccount a:hover{
+      color: white;
+  }
+  
   
   #conteinerFooter{
       position: absolute;
       margin:0;
-      width: 23.9vw;
+      width: 23.8vw;
       height:8vh;
       bottom:0;
       background-color:#004481;
@@ -120,7 +139,7 @@ export function loginTemplate() {
   
   #ImageFooter{
     height:8vh;
-    width: 23.9vw;
+    width: 23.8vw;
   }
   
     </style>
@@ -129,7 +148,7 @@ export function loginTemplate() {
      
           <header id="containerHeader">
             <img id="ImageHeader" src="./assests/logo2.png">
-            <img id="voz" src="./assests/voz.png">
+            <button id="voz"><i class="fas fa-microphone"></i></button>
           </header>
 
           <main id="conteinerMain">
@@ -184,4 +203,10 @@ export function loginTemplate() {
         return true;
     });
   }
+
+  export function goToAsistance() {
+    document.getElementById("voz").addEventListener("click", () => {
+    window.location = '#/asistancevoice';
+})}
+
   
