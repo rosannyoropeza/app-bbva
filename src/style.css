@@ -10,6 +10,7 @@
     background: rgb(0, 0, 71);
     justify-content: center;
     display: flex;
+    font-family: url("./assests/Dubai-Regular.ttf");
   }
  
   #root{

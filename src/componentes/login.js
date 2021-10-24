@@ -74,6 +74,7 @@ export function loginTemplate() {
   p {
       margin: 2% 5% 5% 5%;
       color: white;
+      font-family: url("./../assests/Dubai-Regular.ttf") !important;
   }
   
   .containerCreateAccount {
@@ -88,7 +89,9 @@ export function loginTemplate() {
   .button{
       background-color: #46759f;
       color: #F9F4F4;
-      font-family: 'Yusei Magic', sans-serif;
+      font-family: url("./assests/Dubai-Regular.ttf");
+      font-weight: bold;
+      font-size: 1.1em;
       width: 131px;
       height: 50px;
       border:none;
@@ -126,7 +129,6 @@ export function loginTemplate() {
     .containerCreateAccount a:hover{
       color: white;
   }
-  
   
   #conteinerFooter{
       position: absolute;
