@@ -17,7 +17,6 @@ export function inicio() {
         font-weight: bold;
         font-size: 1.1em;
         z-index:2;
-        font-family: url("./assests/Dubai-Regular.ttf");
     }
     
     #buttonInicio:hover{
