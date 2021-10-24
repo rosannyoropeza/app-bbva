@@ -3,7 +3,7 @@ import { homePage } from '../componentes/homepage.js';
 import { inicio, irALogin } from '../componentes/inicio.js';
 import { asistantVoice, openAsistance} from '../componentes/asistantVoiceGuiade.js';
 import { aliado } from '../componentes/aliados.js';
-import { mediador } from '../componentes/intemediario.js';
+import {mediador } from '../componentes/intermediario.js';
 
 const content = document.getElementById('root');
 

@@ -1,4 +1,4 @@
-import login from "./../fetch.js";
+// import login from "./../fetch.js";
 // import login from "../login.css"
 
 export function loginTemplate() {
@@ -188,21 +188,22 @@ export function loginTemplate() {
     btnLogIn.addEventListener('click', () => {
       const phone = document.getElementById('signInPhone').value;
       const password = document.getElementById('signInpassword').value;
-      const error = document.getElementById('errorPassword');
+      //const error = document.getElementById('errorPassword');
       console.log("diste click", phone, password)
   
-      login(phone, password)
-        .then((res) => {
-            console.log('res',res)
-            if(res.message === 'Login correcto'){
-              window.location = '#/homepage';
-              console.log('Estas logueado')
-            }
-            else{
-               error.innerHTML=res.error;
-            }
-        })
-        return true;
+       window.location = '#/homepage';
+      // login(phone, password)
+      //   .then((res) => {
+      //       console.log('res',res)
+      //       if(res.message === 'Login correcto'){
+      //            window.location = '#/homepage';
+      //         console.log('Estas logueado')
+      //       }
+      //       else{
+      //          error.innerHTML=res.error;
+      //       }
+      //   })
+      //   return true;
     });
   }
 

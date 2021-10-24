@@ -61,7 +61,7 @@ root::-webkit-scrollbar-track {
 
   /*************************** homepage**********************************/
   .containerHomepage {
-    height: 188vh;
+    height: 162vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
