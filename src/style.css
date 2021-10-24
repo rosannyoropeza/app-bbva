@@ -1,13 +1,378 @@
 *{
-    box-sizing: border-box;
-  }
-  body {
     margin: 0;
     padding: 0;  
+    box-sizing: border-box;
   }
+ 
   #root{
       width: 100vw;
       height: 100vh;
-      background: red;
+      /* background-color: black; */
   }
+
+
+  /*************************** inicio **********************************/
+
+  .containerInicio{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .containerInicio img {
+    width: 100%;
+    height: 100vh;
+}
+
+  .containerInicio button {
+      position: absolute;
+      top: 81.5vh;
+      left: 42vw;
+      width: 4em;
+      /* 
+      height: 3.1em; */
+      background: #1873b9;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em
+      ;
+  }
+
+@media (min-width: 500px) {
+.containerInicio{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .containerInicio img {
+    min-width: 30%;
+    max-width: 30%;
+    height: 100vh;
+}
+
+.containerInicio button {
+    position: absolute;
+    top: 81.5vh;
+    left: 48vw;
+    width: 4.5vw;
+    background: #1873b9;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em
+    ;
+}
+}
+
+
+
+
+  /*************************** homepage**********************************/
+  .containerHomepage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: rgb(204, 198, 198) solid 0.1em;
+    border-left: rgb(204, 198, 198) solid 0.1em;
+   }
+
+   .header{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background: #0073bd;
+      width: 100%;
+      padding: 0.5em 0em 1.5em 0em;
+      color: white;
+   }
+
+   .options {
+       background: #0073bd;
+       display: flex;
+       justify-content: end;
+       margin-bottom: 1em;
+   }
+
+   .options button {
+       border: none;
+       color: white;
+       background:#0073bd;
+       margin-right: 2em;
+   }
+
+   .options button i {
+       font-size: 1.5em;
+   }
+
+   .user h2 {
+     margin-left: 7%;
+   }
+
+   .containerOperations{
+     width: 100%;
+      height: auto;
+     display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      align-items: center;
+      padding-bottom: 1em;
+   }
+
+   .containerOperations h3 {
+       color: #0073bd ;
+       margin-bottom: 1em;
+   }
+   .operations{
+       padding: 1em 0em;
+       display: flex;
+       justify-content: space-evenly;
+       flex-wrap: wrap;
+       background: #0073bd;
+       color: white;
+       text-align: center;
+   }
+
+   .operation {
+       width: 6em;
+       height: 6em;
+       margin: 0.3em;
+       border: white solid 0.1em;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .operation img {
+       width: 30%;
+       margin-bottom: 0.5em;
+   }
+
+   .slider {
+       width: 100%;
+       height: 50em;
+       color: white;
+       position: relative;
+       text-align: center;
+       padding-bottom: 1em;
+   }
+
+   .slider img {
+       width: 100%;
+       height: 14em;
+       filter: brightness(70%);
+   }
+
+   .slider h4 {
+       width: 40%;
+       position: absolute;
+       top: 2em;
+       left: 2em;
+   }
+
+   .slider h2 {
+       position: absolute;
+       top: 4.5em;
+       width: 50%;
+       left: 1em;
+   }
+
+   .oportunities{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       height: 70em;
+       background: #e4e5ff;
+       text-align: center;
+       padding-bottom: 1em;
+       margin-bottom: 1em;
+   }
+
+   .oportunities h4 {
+       margin-top: 0.5em;
+       color: #296198;
+       padding: 0.5em;
+   }
+
+   .divImg {
+       position: relative;
+       width: 70%;
+       height: 10em;
+       display: flex;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .divImg img {
+       width: 100%;
+       height: 10em;
+       border-radius: 1em; 
+   }
+
+   .oportunitiesOption {
+     background: transparent;
+       bottom: 0;
+       height: 2em;
+       position: absolute;
+       border-bottom-left-radius:1em ;
+       border-bottom-right-radius: 1em;
+       width: 100%;
+
+   }
+
+   .oportunitiesOptionText {
+       background: rgba(170, 230, 224, 0.61);
+       bottom: 0;
+       height: 2em;
+       position: absolute;
+       border-bottom-left-radius:1em ;
+       border-bottom-right-radius: 1em;
+       width: 100%;
+   }
+
+   .oportunitiesOptionText span {
+       font-size: 1.3em;
+       margin: 0.5em 0em;
+       color: white;
+   }
+
+   .welfare{
+       width: 100%;
+       height: 15em;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: relative;
+   }
+
+   .welfare h4 {
+       color: #296198;
+       padding: 0.5em;  
+   }
+
+   .welfare img {
+       width: 100%;
+       height: 15em; 
+       filter: brightness(70%);
+       margin-top: 1em;
+       margin-bottom: 1em;
+   }
+
+
+   .welfareOptions{
+       width: 100%;
+       height: 15em;
+       display: flex;
+       flex-direction: row;
+       position: absolute;
+       top: 2em;
+       left: 0;
+   }
+
+   .welfareLeft{
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: absolute;
+       top: 6em;
+   }
+
+   .welfareLeft p {
+       width: 60%;
+       color: white;
+       padding: 1em 0em;
+   }
+
+   .welfareLeft h4 {
+       color: white;
+       font-size: 1.5em;
+   }
+
+   .welfareRight{
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: absolute;
+       left: 18em;
+       top: 1em;
+       align-items: center;
+   }
+
+   .welfareRight img {
+    width: 2em;
+    height: 2em;
+    padding: 0.3em;
+   }
+
+   .welfare p {
+       margin-top: 1.5em;
+       align-items: center;
+   }
+
+   .welfareOption{
+       display: flex;
+       padding: 0.4em 0em;
+       height: auto;
+   }
+
+   .menu {
+       width: 100%;
+       height: 5em;
+       display: flex;
+       justify-content: space-around;
+       border: rgb(193, 197, 197) solid 0.1em;
+       box-shadow: 1px 1px 1px 1px rgb(105, 105, 105);
+   }
+
+   .menu button {
+       height: 4em;
+       width: 20%;
+       border: none;
+   }
+
+   .menu button img {
+       width: 2.5em;
+       height: 2.5em;
+
+   }
+  
+  
+  @media (min-width: 500px) {
+
+    .containerHomepage {
+     height: 150vh;
+     width: 20%;
+    }
+
+    .header{
+       height: 20%;
+       color: white;
+    }
+
+    
+   .oportunities{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50em;
+    background: #e4e5ff;
+    text-align: center;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+}
+
+    
+
+
+
 

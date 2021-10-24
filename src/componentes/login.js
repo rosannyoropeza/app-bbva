@@ -1,4 +1,4 @@
-export function inicio() {
+export function login() {
     const form = `   
     <div class="container">
     <h2>Hagamos tu presupuesto mensual</h2>

@@ -1,24 +1,25 @@
-import { inicio } from '../componentes/login.js';
-
+import { login } from '../componentes/login.js';
+import { inicio, irALogin } from '../componentes/inicio.js';
+import { homePage } from '../componentes/homepage.js';
 
 const content = document.getElementById('root');
 
 export const router = (route) => {
   content.innerHTML = '';
   switch (route) {
-    // case '#/login':
-    // content.appendChild(inicio());
+      case '#/homepage':
+    content.appendChild(homePage());
     // //   signUp();
     // //   signUpGoogle();
-    //  break;
-    // case '#/timeline':
-    //   content.appendChild(timelinePage());
-    //   signOutGoogle();
+     break;
+     case '#/login':
+      content.appendChild(login());
     //   postsTimeline();
     //   newCollectionPopersonajes
-    //   break;
+     break;
     default:
       content.appendChild(inicio());
+        irALogin();
       // logIn();
       // signUpGoogle();
       break;
