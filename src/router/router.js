@@ -14,7 +14,6 @@ export const router = (route) => {
     case '#/login':
       content.appendChild(loginTemplate());
       logIn();
- 
       break;
     default:
       content.appendChild(inicio());

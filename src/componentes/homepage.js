@@ -1,5 +1,5 @@
 export function homePage() {
-    const homepage = `   
+    const homepage = `
     <div class="containerHomepage">
     <div class="header">
         <div class="options">
@@ -40,11 +40,44 @@ export function homePage() {
          </div>
        </div>
      </div>
-     <div class="slider">
-        <img src="./assests/compras-exterior.jpg" alt="">
-        <h4> Conoce todos lo beneficios que BBVA tiene para ti </h4>
-        <h2> Todo lo que necesitas en un solo lugar </h2>
-      </div>
+     <section id="container-slider" class="slider">
+        <ul class="listslider">
+            <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+            <li><a itlist="itList_1" href="#"></a></li>
+            <li><a itlist="itList_2" href="#"></a></li>
+        </ul>
+
+        <ul id="slider">
+            <li style="background-image:url('./assests/compras-exterior.jpg'); z-index:0; opacity: 1;">
+            <div class="content_slider" >
+                <div>
+                <p> Conoce todos lo beneficios que BBVA tiene para ti </>
+                <h2>Todo lo que necesitas en un solo lugar </h2>
+            <a href="#" class="btnSlider">Ver más</a>
+            </div>
+            </div>
+            </li>
+            <li style="background-image: url('https://cdn.pixabay.com/photo/2018/02/20/10/28/business-3167295_960_720.jpg'); ">
+            <div class="content_slider" >
+                <div>
+                <p> Te acompañamos en tu dia a dia </>
+                <h2> Enterate como </h2>
+            <a href="#" class="btnSlider">Ver más</a>
+            </div>
+            </div>
+            </li>
+            <li style="background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/42/typing-849806_960_720.jpg'); ">
+            <div class="content_slider" >
+                <div>
+                <p> Queremos ser mas que tu banco, tua aliado por eso tenemos nuestros productos </>
+                <h2> Conocelos </h2>
+            <a href="#" class="btnSlider">Ver más</a>
+            </div>
+            </div>
+            </li>
+        </ul>
+        </section>
+
         <div class="oportunities">
             <h4> Oportunidades </h4>
                 <div class="divImg">
@@ -93,3 +126,60 @@ export function homePage() {
     divPerfil.innerHTML = homepage;
     return divPerfil;
 }
+
+
+
+if(document.querySelector('#container-slider')){
+    setInterval('fntExecuteSlide("next")',5000);
+ }
+ //------------------------------ LIST SLIDER -------------------------
+ if(document.querySelector('.listslider')){
+    let link = document.querySelectorAll(".listslider li a");
+    link.forEach(function(link) {
+       link.addEventListener('click', function(e){
+          e.preventDefault();
+          let item = this.getAttribute('itlist');
+          let arrItem = item.split("_");
+          fntExecuteSlide(arrItem[1]);
+          return false;
+       });
+     });
+ }
+ 
+ function fntExecuteSlide(side){
+     let parentTarget = document.getElementById('slider');
+     let elements = parentTarget.getElementsByTagName('li');
+     let curElement, nextElement;
+ 
+     for(var i=0; i<elements.length;i++){
+ 
+         if(elements[i].style.opacity==1){
+             curElement = i;
+             break;
+         }
+     }
+     if(side == 'prev' || side == 'next'){
+ 
+         if(side=="prev"){
+             nextElement = (curElement == 0)?elements.length -1:curElement -1;
+         }else{
+             nextElement = (curElement == elements.length -1)?0:curElement +1;
+         }
+     }else{
+         nextElement = side;
+         side = (curElement > nextElement)?'prev':'next';
+ 
+     }
+     //RESALTA LOS PUNTOS
+     let elementSel = document.getElementsByClassName("listslider")[0].getElementsByTagName("a");
+     elementSel[curElement].classList.remove("item-select-slid");
+     elementSel[nextElement].classList.add("item-select-slid");
+     elements[curElement].style.opacity=0;
+     elements[curElement].style.zIndex =0;
+     elements[nextElement].style.opacity=1;
+     elements[nextElement].style.zIndex =1;
+ }
+
+
+//  <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+//         <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>

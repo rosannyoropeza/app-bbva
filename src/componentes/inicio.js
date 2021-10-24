@@ -1,14 +1,40 @@
 export function inicio() {
     const form = `   
-    <div class="containerInicio">
-    <img src="./assests/2.jpg" alt="">
+
+    <style>
+    .imagen_h{
+       height: 93.64vh; 
+       z-index:1;
+    }
+    #buttonInicio{
+        position: absolute;
+        bottom: 16.45vh;
+        width: 10vw;
+        height: 3.1em;
+        background: #1873b9;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        z-index:2;
+    }
+    
+    #buttonInicio:hover{
+        cursor: pointer;
+    }
+
+    </style>
+
+    
+    <img class="imagen_h" src="./assests/2.jpg" alt="">
     <button id="buttonInicio">Entrar</button>
-    </div>
+    
    `;
 
-    const divInicio = document.createElement('div');
-    divInicio.innerHTML = form;
-    return divInicio;
+    const containerInicio = document.createElement('div');
+    containerInicio.innerHTML = form;
+    containerInicio.className = ("containerInicio");
+    return containerInicio;
 }
 
 export function irALogin() {
