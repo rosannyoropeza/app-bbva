@@ -9,6 +9,12 @@ const content = document.getElementById('root');
 export const router = (route) => {
   content.innerHTML = '';
   switch (route) {
+    case '#/confirmacion':
+      content.appendChild(mediador());
+      break;
+    case '#/aliados':
+      content.appendChild(aliado());
+      break;
     case '#/homepage':
       content.appendChild(homePage());
       break;

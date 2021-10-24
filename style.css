@@ -10,7 +10,7 @@
     background: rgb(0, 0, 71);
     justify-content: center;
     display: flex;
-    font-family: url("./assests/Dubai-Regular.ttf");
+    
   }
  
   #root{
@@ -43,7 +43,7 @@
     border-radius: 20px;
 }
 root::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 10px;  
 }
 
 
@@ -54,54 +54,29 @@ root::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     height: 94vh;
-
+    
   }
-
-
-
-  .containerCreateAccount{
-    background-color:#223f58;
-    width: 24.3vw;
-    height: 12vh;
-    text-align: center;
-    color: #6c7985;
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
-   padding-bottom: 1.5em;
-}
-
-.containerCreateAccount a{
-    font-size: 1.2em;
-    font-weight: bolder;
-    text-decoration: none;
-    color: #6c7985;
-    margin-left: 0.2em;
-}
 
 
 
   /*************************** homepage**********************************/
   .containerHomepage {
-    height: 170vh;
+    height: 188vh;
     display: flex;
     flex-direction: column;
-    width: 24.3vw;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     background: white;
     overflow-x: hidden;
    }
 
    .header{
-    display: flex;
     justify-content: center;
     flex-direction: column;
     background: #0073bd;
     width: 24.3vw;
     padding: 0.5em 0em 1.5em 0em;
     color: white;
+    margin-top: -4.1vh;
  }
  .options {
     background: #0073bd;
@@ -155,7 +130,7 @@ root::-webkit-scrollbar-track {
     background: #0073bd;
     color: white;
     text-align: center;
-    padding: 1em 0.5em;
+    padding: 1em 0.4em;
 }
 
 .operation {
@@ -168,25 +143,30 @@ root::-webkit-scrollbar-track {
     align-items: center;
     margin: 0.3em 0em;
 }
-
-.operation:hover {
-background: #004481;
-}
-
 .operation img {
     width: 30%;
     margin-bottom: 0.3em;
+}
+
+#traslados{
+    height: 30vh;
+    width: 24vw;
+    background-color: aqua;
+    margin-bottom: 5vh;
+    background-image: url("assests/regalo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .oportunities{
     display: flex;
     flex-direction: column;
     width: 24.3vw;
-    height: 27vh;
+    height: 37vh;
     background: #e4e5ff;
     text-align: center;
     padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     position: relative;
     overflow-x: hidden;
     flex-direction: row;
@@ -198,14 +178,15 @@ background: #004481;
     margin-top: 0.5em;
     color: #296198;
     padding: 0.5em;
+    font-size: 1.3em;
     text-align: center;
 }
 
 .divImg {
     position: absolute;
     width: 18vw;
-    height: 20vh;
-    margin: 5vh 0 0 1vw;
+    height: 24vh;
+    margin: 9vh 0 0 1vw;
     background-image: url("./assests/viajeA.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -217,7 +198,7 @@ background: #004481;
   content: "";
   position: absolute;
   bottom: 0;
-  height: 5vh;
+  height: 6vh;
   padding-top: 1.3vh;
   border-bottom-left-radius:10px;
   border-bottom-right-radius: 10px;
@@ -229,8 +210,8 @@ background: #004481;
 .divImg1{
     position: absolute;
     width: 20vw;
-    height: 20vh;
-    margin: 5vh 0 0 20vw;
+    height: 24vh;
+    margin: 9vh 0 0 20vw;
     background-image: url("./assests/tec.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -242,7 +223,7 @@ background: #004481;
     content: "";
     position: absolute;
     bottom: 0;
-    height: 5vh;
+    height: 6vh;
     padding-top: 1.3vh;
     border-bottom-left-radius:10px;
     border-bottom-right-radius: 10px;
@@ -253,18 +234,18 @@ background: #004481;
 
 .oportunitiesOptionText {
     bottom: 0;
-    height: 6vh;
-    padding-top: 0.5vh;
+    height: 8vh;
+    padding-top: 1.5vh;
     position: absolute;
     border-bottom-left-radius:1em ;
     border-bottom-right-radius: 1em;
-    width: 24.3vw;
+    width: 18vw;
     z-index: 5;
-    margin-left: -5vw;
+    margin-left: 0;
 }
 
 .oportunitiesOptionText span {
-    font-size: 2em;
+    font-size: 1.6em;
     margin: 0.5em 0em;
     color: white;
 
@@ -272,17 +253,18 @@ background: #004481;
 
 .welfare{
     width: 24.3vw;
-    height: 15em;
+    height:30vh;
     display: flex;
+    margin:0;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    /* background-image: ;
-    background-size: ; */
+    background-image:url(  "./assests/home1.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    padding-bottom: 2vh;
 }
 
-.title_w {
+/* .title_w {
     color: #296198;
     padding: 0.5em;  
     position: absolute;
@@ -295,15 +277,14 @@ background: #004481;
     filter: brightness(70%);
     margin-top: 1em;
     margin-bottom: 1em;
-}
+} */
 
-
+/* 
 .welfareOptions{
     width: 100%;
     height: 15em;
     display: flex;
     flex-direction: row;
-    position: absolute;
     top: 2em;
     left: 0;
 }
@@ -313,7 +294,6 @@ background: #004481;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     top: 6em;
 }
 
@@ -334,7 +314,6 @@ background: #004481;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     left: 18em;
     top: 1em;
     align-items: center;
@@ -356,14 +335,16 @@ background: #004481;
     display: flex;
     padding: 0.4em 0em;
     height: auto;
-}
+} */
 
 .menu {
     width: 24.3vw;
-    height: 5em;
+    height: 6vh;
     display: flex;
-    justify-content: space-around;
-    border: rgb(193, 197, 197) solid 0.1em;
+    background-color: #0084ff;
+    justify-content: stretch;
+    margin-top: 1vh;
+    border: rgb(221, 221, 221) solid 0.1em;
     box-shadow: 1px 1px 1px 1px rgb(105, 105, 105);
 }
 
@@ -537,3 +518,50 @@ background: #004481;
 .item-select-slid {
     background: #FFF  !important;
 } 
+
+
+
+
+
+/* @media screen and (max-width: 460px){
+	.content_slider h2 {
+	    font-size: 15pt !important;
+	}
+	.content_slider p {
+	    font-size: 12pt !important;
+	}
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 400px;
+		min-height: 400px;
+	}
+	#slider li .content_slider{
+		padding: 10px 35px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	} */
+
+
+
+
+
+
+  
+
+/* 
+
+.slider img {
+    width: 100%;
+    height: 14em;
+    filter: brightness(70%);
+}
