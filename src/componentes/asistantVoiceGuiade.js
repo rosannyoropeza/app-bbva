@@ -146,8 +146,15 @@ export function asistantVoice() {
     const divElement = document.createElement('div');
     divElement.innerHTML = view;
     divElement.className = ("containerAsistant");
-    divElement.setAttribute("id", "containerAsistantGuide")
+    divElement.setAttribute("id", "containerAsistantGuide");
     return divElement;
+
+    const divElement1 = document.createElement('div');
+    divElement1.innerHTML = view;
+    divElement1.className = ("containerAsistant1");
+    divElement1.setAttribute("id", "containerAsistantGuide1");
+    return divElement1;
+
   }
 
 
@@ -155,10 +162,10 @@ function start() {
     if (annyang) {
         annyang.setLanguage("es-CO")
         annyang.start({ autoRestart: true, continuous: false }); 
-        console.log("Listening...")
+        console.log("Listening...");
         annyang.addCommands(comandos);
         annyang.debug()
-        let data = document.getElementById("containerAsistantGuide") 
+        let data = document.getElementById("containerAsistantGuide");
         console.log(data)
 }
 }
@@ -166,13 +173,13 @@ function start() {
 let bandera = false;
 annyang.addCallback('soundstart', function () {
     if (!bandera){
-        document.getElementById("containerAsistant").style.display="block"
+        document.getElementById("containerAsistantGuide").style.display="block";
         setTimeout(() => {
-            voz('Hola soy Frida tu asistente virtual, como puedo ayudarte?')
+            voz('Hola soy Frida tu asistente virtual, como puedo ayudarte?');
             bandera = true;
         }, 1000);
     }
-    console.log("sound detected")
+    console.log("sound detected");
 });
 
 annyang.addCallback('result', function () {
@@ -388,19 +395,18 @@ const comandos = {
 }
 
 function voz(texto) {
-    // document.getElementById("all2").style.visibility = "hidden";
+    //document.getElementById("containerAsistantGuide").style.visibility = "hidden";
     var textoAEscuchar = texto;
     var mensaje = new SpeechSynthesisUtterance();
     mensaje.text = textoAEscuchar;
     mensaje.volume = 1;
     mensaje.rate = 0.7;
     mensaje.pitch = 1;
-    // ¡Parla!
-    // document.getElementById("all").style.visibility = "visible";
-    // setTimeout(() => {
-    //     document.getElementById("all").style.visibility = "hidden";  
-    //     document.getElementById("all2").style.visibility = "visible";      
-    // }, 4000);
+   // document.getElementById("containerAsistantGuide1").style.visibility = "visible";
+    setTimeout(() => {
+        //document.getElementById("containerAsistantGuide1").style.visibility = "hidden";  
+        //document.getElementById("containerAsistantGuide").style.visibility = "visible";      
+    }, 4000);
     speechSynthesis.speak(mensaje);
 }
 
