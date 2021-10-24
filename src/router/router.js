@@ -1,7 +1,7 @@
 import { loginTemplate,logIn, goToAsistance} from '../componentes/login.js';
 import { homePage } from '../componentes/homepage.js';
 import { inicio, irALogin } from '../componentes/inicio.js';
-import { asistantVoice} from '../componentes/asistantVoiceGuiade.js';
+import { asistantVoice, openAsistance} from '../componentes/asistantVoiceGuiade.js';
 
 
 const content = document.getElementById('root');
@@ -19,6 +19,7 @@ export const router = (route) => {
       break;
     case '#/asistancevoice':
         content.appendChild(asistantVoice());
+        openAsistance();
         break;
     default:
       content.appendChild(inicio());

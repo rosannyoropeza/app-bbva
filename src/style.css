@@ -168,6 +168,11 @@ root::-webkit-scrollbar-track {
     align-items: center;
     margin: 0.3em 0em;
 }
+
+.operation:hover {
+background: #004481;
+}
+
 .operation img {
     width: 30%;
     margin-bottom: 0.3em;
